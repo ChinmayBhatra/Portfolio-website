@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h1>About Me</h1>
+            <p>Hello! I'm a passionate web developer with a love for building clean and responsive websites. I have experience with HTML, CSS, JavaScript, and more. I'm always looking to learn new technologies and improve my skills.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h1>My Projects</h1>
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>This is a description of project 1. It demonstrates my skills in HTML and CSS.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>This project showcases my knowledge of JavaScript and responsive design.</p>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h1>Contact Me</h1>
+            <form action="#">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 My Portfolio</p>
+    </footer>
+</body>
+</html>
+<head>
+    <link rel="stylesheet" href="Portfolio.css">
+</head>
+<head>
+    <script>
+    // script.js
+
+// Get the button and the list container
+const showProjectsBtn = document.getElementById('showProjectsBtn');
+const projectsListContent = document.getElementById('projects-list-content');
+
+// Array of projects
+const projects = [
+    { name: 'Portfolio Website', description: 'A personal portfolio website showcasing my work.' },
+    { name: 'E-commerce Site', description: 'An online store with payment gateway integration.' },
+    { name: 'Weather App', description: 'A web app that shows weather information based on location.' }
+];
+
+// Event listener for the button
+showProjectsBtn.addEventListener('click', function() {
+    // Clear the current list if it exists
+    projectsListContent.innerHTML = '';
+
+    // Create a list of projects dynamically
+    projects.forEach(project => {
+        const li = document.createElement('li');
+        li.innerHTML = `<strong>${project.name}</strong>: ${project.description}`;
+        projectsListContent.appendChild(li);
+    });
+});
+</script>
+</head>
